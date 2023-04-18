@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deck of cards</title>
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+
+    <!-- Import the Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"> 
+
+</head>
+
+<body>
+
+    <div class="menu container rounded border">
+
+        <div class="row justify-content-center">
+            <h3 class="mt-2">Deck of cards</h3>
+        </div>
+
+        <form id="deckForm">
+            <div class="row justify-content-center">
+                <input type="submit" class="btn btn-primary ml-2 mb-1" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div class="commits container rounded border mt-1">
+        <div class="row justify-content-center">
+            <div class="card bg-success">
+                <ul id="userCommits" class="list-group"></ul>
+            </div>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
