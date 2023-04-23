@@ -21,20 +21,24 @@
             <h3 class="mt-2">Deck of cards</h3>
         </div>
 
-        <form id="deckForm">
-            <div class="row justify-content-center">
-                <input type="submit" class="btn btn-primary ml-2 mb-1" value="Submit">
-            </div>
-        </form>
-    </div>
-    <div class="commits container rounded border mt-1">
         <div class="row justify-content-center">
-            <div class="card bg-success">
-                <ul id="userCommits" class="list-group"></ul>
-            </div>
+            <button onclick="newDeck()" class="btn btn-primary" type="submit">New deck</button>
+        </div>
+
+        <div class="row justify-content-center">
+            <button onclick="newHand()" class="btn btn-primary" type="submit">New Hand</button>
         </div>
         
     </div>
+
+    <div class="commits container rounded border mt-1">
+        <div class="row justify-content-center">
+            <div class="card bg-success">
+                <ul id="handPlayer" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
