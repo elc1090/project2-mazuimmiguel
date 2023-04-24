@@ -1,8 +1,18 @@
-.menu{
-    background: #f9f9f9;
-    width: 200px;
+body{
+    background-color: #267e1a;
 }
 
-.hands{
-    width: 1500px;
+.menu{
+    background: #f8f8f8;
+    width: 400px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    width: 70px;
+    height: 60px;
 }
