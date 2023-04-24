@@ -18,23 +18,27 @@
             <h3 class="mt-3">Dealer Hand</h3>
         </div>
 
-        <div class="row justify-content-center">
-            <ul id="dealerHand" class="list-group list-group-horizontal">
-                <!-- <li class="list-group-item"> <img src="assets/favicon.ico" alt="card"></li> -->
-            </ul>
+        <div class="row align-items-center">
+            <ul id="dealerHand" class="list-group list-group-horizontal"></ul>
+        </div>
+
+        <div class="row text-center">
+            <h3 id="dealerCounter" class="mt-3">Count:</h3>                        
         </div>
     </div>
 
 
     <div class="hands container rounded border mt-1">
         <div class="row text-center">
-            <h3 class="mt-3">Player Hand</h3>                         
+            <h3 class="mt-3">Player Hand</h3>                        
         </div>
 
-        <div class="row justify-content-center">
-            <ul id="playerHand" class="list-group list-group-horizontal">
-                <!-- <li class="list-group-item"> <img src="assets/favicon.ico" alt="card"> </li> -->
-            </ul>
+        <div class="row align-items-center">
+            <ul id="playerHand" class="list-group list-group-horizontal center"></ul>
+        </div>
+
+        <div class="row text-center">
+            <h3 id="playerCounter" class="mt-3">Card Count:</h3>                        
         </div>
     </div>
 
@@ -47,7 +51,7 @@
             <p id="pDeckId" class="mt-2">DeckId: None yet</p>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row align-items-center">
             <button onclick="newDeck()" class="btn btn-primary" type="submit">New deck</button>
         </div>
 
@@ -55,8 +59,11 @@
             <button onclick="newHand()" class="btn btn-primary" type="submit">New Hand</button>
         </div>
         <div class="row justify-content-center">
-            <button onclick="addCard()" class="btn btn-primary" type="submit">Add card</button>
-        </div>        
+            <button id="hitButton" onclick="addCard()" class="btn btn-primary" type="submit">Hit</button>
+        </div>  
+        <div class="row justify-content-center">
+            <button id="hitButton" onclick="stop()" class="btn btn-primary" type="submit">Stop</button>
+        </div>       
     </div>
 
     <script src="app.js"></script>
