@@ -1,7 +1,6 @@
 # Simple BlackJack
 
-Acesso: Em criação
-
+Acesso: https://elc1090.github.io/project2-mazuimmiguel/
 
 #### Desenvolvedor(a)
 Page desenvolvida por Miguel Mazuim da Silva.
