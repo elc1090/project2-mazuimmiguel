@@ -13,6 +13,7 @@ Foi realizado uma página com o jogo de carta BlackJack simplificado para utiliz
 - CSS
 - Javascript
 - Bootstrap
+- Sweet Alert
 - Deck of Cards API
 
 #### Ambiente de desenvolvimento
@@ -22,7 +23,7 @@ Foi realizado uma página com o jogo de carta BlackJack simplificado para utiliz
 
 #### Créditos
 
-- APi utilizadad: https://deckofcardsapi.com/
+- API utilizadad: https://deckofcardsapi.com/
 
 #### Bastidores
 
