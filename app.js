@@ -4,6 +4,8 @@ var dealerHand = [];
 var dealerSum;
 var playerSum;
 
+var stats = [0,0,0,0]
+
 window.onload = function() {
     newDeck();
 };
@@ -12,9 +14,10 @@ async function newDeck(){
     await fetch(`https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6`)
         .then(response => response.json()) 
         .then(data => {   
-            deckId = data.deck_id;                      
+            deckId = data.deck_id;
+                                
         })
-
+    stats[0]++;
     newGame();
 }
 
@@ -72,6 +75,7 @@ function newGame (){
             countCards('playerHand');
             countCards('dealerHand');
         }) 
+    stats[1]++;
 }           
             
 async function addCard(handType){
@@ -154,7 +158,7 @@ function countCards(handType){
         for(let i in dealerHand){
             switch(dealerHand[i]){
                 case `ACE`:
-                    if(playerHand.length === 2){
+                    if(dealerHand.length === 2){
                         sum +=11; 
                     }else{
                         sum +=1;
@@ -197,11 +201,23 @@ async function dealerAI(){
 function resultMatch(result){
     if(dealerSum > 21){
         swal("Você ganhou!", "Causa: Dealer passou de 21!", "success");
+        stats[2]++;
     }else if(result === "bust"){
         swal("Você perdeu!", "Causa: Passou de 21!", "error");
+        stats[3]++;
     }else if(dealerSum >= playerSum){
         swal("Você perdeu!", "Causa: Tem menos ou igual que o dealer!", "error");
+        stats[3]++;
     }else{
         swal("Você ganhou!", "Causa: Tem mais que o dealer!", "success");
+        stats[2]++;
     }
+}
+
+function statsCall(){
+    swal("Estatísticas:", `Nesta sessão:
+                           Novo decks:${stats[0]}, 
+                           Novo jogos:${stats[1]}, 
+                           Jogos ganhos:${stats[2]}, 
+                           Jogos perdidos:${stats[3]}.`);
 }
