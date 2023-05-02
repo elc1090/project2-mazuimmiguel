@@ -196,12 +196,12 @@ async function dealerAI(){
 
 function resultMatch(result){
     if(dealerSum > 21){
-        alert("Tu ganhou!");
+        swal("Você ganhou!", "Causa: Dealer passou de 21!", "success");
     }else if(result === "bust"){
-        alert("Passou de 21!");
-    }else if(dealerSum > playerSum){
-        alert("Menos que dealer!");
+        swal("Você perdeu!", "Causa: Passou de 21!", "error");
+    }else if(dealerSum >= playerSum){
+        swal("Você perdeu!", "Causa: Tem menos ou igual que o dealer!", "error");
     }else{
-        alert("Tu ganhou!");
+        swal("Você ganhou!", "Causa: Tem mais que o dealer!", "success");
     }
 }
